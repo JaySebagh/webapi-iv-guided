@@ -18,7 +18,7 @@ server.get('/', async (req, res) => {
   }
 });
 
-server.post('/', async (req, res) => {
+server.post('/shoutouts', async (req, res) => {
   try {
     const [id] = await db('shoutouts').insert(req.body);
     const shoutouts = await db('shoutouts');
